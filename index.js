@@ -11,7 +11,7 @@ let ITERATIONS = 60
 let escape_radius = 40
 let frame = 0
 let speed = 0.2
-let frameDelay = 20
+let frameDelay = 10
 let yy = [-1.5, 1.5]
 let xx = [-1.5 * (w/h), 1.5 * (w/h)]
 canvas.width = w; canvas.height = h
