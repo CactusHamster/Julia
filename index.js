@@ -60,8 +60,10 @@ function render () {
 	renderFunctionRunning = true
 	//let a = -0.8 + 0.6 * /*fastSin*/Math.sin(frame / (Math.PI * 20), 1)
 	//let c = 0.156 + 0.4 * Math.cos(frame / (Math.PI * 40))
-	let a = prop(Math.cos(frame * 0.1), -1, 1, -Math.PI*0.1, Math.PI*0.1)
-	let c = prop(Math.sin(frame * 0.1), -1, 1, -Math.PI*1, Math.PI*1)
+	//let a = prop(Math.cos(frame * 0.1), -1, 1, -Math.PI*0.1, Math.PI*0.1)
+	//let c = prop(Math.sin(frame * 0.1), -1, 1, -Math.PI*1, Math.PI*1)
+	let a = -0.8 + 0.6 * Math.sin(frame / (Math.PI * 20))
+	let c = 0.156 + 0.4 * Math.cos(frame / (Math.PI * 40))
 	julia(xx, yy, a, c, ITERATIONS, escape_radius)
 	//console.log(imagedataurl)
 	renderFunctionRunning = false
