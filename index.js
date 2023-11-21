@@ -15,7 +15,7 @@ let frameDelay = 10
 let yy = [-1.5, 1.5]
 let xx = [-1.5 * (w/h), 1.5 * (w/h)]
 canvas.width = w; canvas.height = h
-const gpu = new GPU.GPU({canvas: canvas});
+const gpu = new GPU({canvas: canvas});
 let julia = gpu.createKernel(function(xx, yy, a, c, iterations, radius) {
 	let x = (this.thread.x / this.constants.w) * (xx[1] - xx[0]) + xx[0]
 	let y = (this.thread.y / this.constants.h) * (yy[1] - yy[0]) + yy[0]
